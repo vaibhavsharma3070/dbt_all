@@ -1,0 +1,62 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: data_no
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: data_status
+        description: "Status of id "
+        tests:
+          - not_null
+      - name: dollar_price
+        description: "Price in dollar "
+        tests:
+          - not_null
+      - name: data_updated_at
+        description: "Status of id updated at"
+        
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: data_no
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: data_status
+        description: "Status of id "
+        tests:
+          - not_null
+      - name: dollar_price
+        description: "Price in dollar "
+        tests:
+          - not_null
+      - name: data_updated_at
+        description: "Status of id updated at"
+
+  - name: my_third_dbt_model
+    description: "Third model for hooks"
+    columns:
+      - name: order_no
+        description: "The primary key for orders"
+        tests:
+          - unique
+      - name: order_status
+        description: "Status of orders "
+        tests:
+          - not_null
+      - name: order_price
+        description: "Order price"
+        tests:
+          - not_null
+      - name: order_updated_at
+        description: "Status of order updated at"
+      
+        
+  - name: madrid_house
+    description: "Loding csv"

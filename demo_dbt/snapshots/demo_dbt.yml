@@ -1,0 +1,26 @@
+version: 2
+
+snapshots:
+  - name: demo_dbt
+    description: To track status for data
+    meta: {'data' : 'data_dbt'}
+    docs:
+      show: true 
+    config:
+      snapshots:
+        +target_schema: wqgzdjha 
+        +target_database: wqgzdjha
+        +unique_key: data_no
+        +strategy: timestamp 
+        +updated_at: data_status
+        +check_cols: all
+    tests:
+      - not_null
+    columns:
+      - name: data_status
+        description: tracking status for data 
+        meta: {'data' : 'data_dbt'}
+        quote: false
+        tests:
+          - not_null
+     

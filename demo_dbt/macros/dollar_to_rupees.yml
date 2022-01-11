@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: dollar_to_rupees
+    arguments:
+      - name: dollar_price
+        type: float
+        description: "Converting dollars to indian rupees"
+
+      
